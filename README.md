@@ -98,4 +98,4 @@ GUI frontend
 
 ## Contributing
 
-If you'd like to contribute, please open a pull-request first, as well as provide detailed information on what has changed.
+If you'd like to contribute, please open a pull-request first, as well as provide detailed information on what to change.
