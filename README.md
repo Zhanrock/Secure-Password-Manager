@@ -1,23 +1,23 @@
-# 🔐 Secure Password Vault (Python)
+#  Secure Password Vault (Python)
 
 A **local, encrypted password manager** implemented from scratch using modern cryptography primitives.  
 Designed as a **security-focused portfolio project** demonstrating cryptographic engineering, clean architecture, and defensive programming.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔑 **Master password–protected vault**
-- 🧂 Argon2 key derivation (memory-hard)
-- 🔐 AES-256-GCM authenticated encryption
-- 🧾 Structured binary vault format
-- 💻 Interactive CLI interface
-- 🔍 Search & filter entries
-- ❌ Tamper detection & wrong-password rejection
+-  **Master password–protected vault**
+-  Argon2 key derivation (memory-hard)
+-  AES-256-GCM authenticated encryption
+-  Structured binary vault format
+-  Interactive CLI interface
+-  Search & filter entries
+-  Tamper detection & wrong-password rejection
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 ```bash
 vault/
@@ -36,7 +36,7 @@ vault_cli.py        # User-facing CLI
 
 ---
 
-## 🔐 Cryptographic Design
+##  Cryptographic Design
 
 | Component   | Choice       | Reason |
 |------------|-------------|--------|
@@ -49,18 +49,18 @@ Wrong passwords or modified files **fail safely**.
 
 ---
 
-## 🖥️ Usage
+##  Usage
 
 ```bash
 python vault_cli.py
 
-🔐 Secure Password Vault
+ Secure Password Vault
 1. Create new vault
 2. Open existing vault
 3. Exit
 ```
 
-# ⚠️ Security Notes
+#  Security Notes
 
 Vault is encrypted at rest
 
@@ -72,7 +72,7 @@ No plaintext passwords written to disk
 
 See SECURITY.md for full threat model.
 
-# 🎯 Educational Goals
+#  Educational Goals
 
 This project was built to:
 
@@ -84,7 +84,7 @@ Apply defensive programming techniques
 
 Build portfolio-ready systems code
 
-# 🚀 Future Improvements
+#  Future Improvements
 
 Clipboard auto-clear
 
@@ -95,7 +95,3 @@ Vault locking timeout
 Hardware-backed key storage
 
 GUI frontend
-
-# 📜 License
-
-MIT License
