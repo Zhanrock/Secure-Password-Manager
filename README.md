@@ -25,8 +25,8 @@ vault/
 ├── crypto.py       # AES-256-GCM encryption/decryption
 ├── format.py       # Vault header serialization/parsing
 └── vault.py        # Create/open/save vault workflows
-
-vault_cli.py        # User-facing CLI
+main.y        # For testing
+cli.py        # User-facing CLI
 ```
 
 ### Separation of concerns
@@ -52,7 +52,7 @@ Wrong passwords or modified files **fail safely**.
 ##  Usage
 
 ```bash
-python vault_cli.py
+python cli.py
 
  Secure Password Vault
 1. Create new vault
