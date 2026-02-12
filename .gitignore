@@ -1,0 +1,3 @@
+*.vault
+*.tmp
+__pycache__/
