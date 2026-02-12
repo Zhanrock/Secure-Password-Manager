@@ -18,18 +18,18 @@ def header(title: str):
 
 def pretty_entries(entries: dict):
     if not entries:
-        print("📭 Vault is empty")
+        print("Vault is empty")
         return
 
     for site, data in entries.items():
-        print(f"🔑 {site}")
+        print(f"{site}")
         print(f"   Username: {data['username']}")
         print("-" * 30)
 
 # ---------- vault actions ----------
 
 def add_entry(vault: dict):
-    header("➕ Add Entry")
+    header("Add Entry")
     site = prompt("Site")
     username = prompt("Username")
     password = getpass.getpass("Password: ")
@@ -39,15 +39,15 @@ def add_entry(vault: dict):
         "password": password,
     }
 
-    print("✅ Entry added")
+    print("Entry added")
 
 def view_entry(vault: dict):
-    header("👁 View Entry")
+    header("View Entry")
     site = prompt("Site")
 
     entry = vault["entries"].get(site)
     if not entry:
-        print("❌ Entry not found")
+        print("Entry not found")
         return
 
     print(f"Site: {site}")
@@ -55,7 +55,7 @@ def view_entry(vault: dict):
     print(f"Password: {entry['password']}")
 
 def search_entries(vault: dict):
-    header("🔍 Search Entries")
+    header("Search Entries")
     keyword = prompt("Search keyword").lower()
 
     results = {
@@ -71,12 +71,12 @@ def delete_entry(vault: dict):
     site = prompt("Site")
 
     if site not in vault["entries"]:
-        print("❌ Entry not found")
+        print("Entry not found")
         return
 
     if confirm(f"Delete '{site}'?"):
         del vault["entries"][site]
-        print("✅ Entry deleted")
+        print("Entry deleted")
 
 # ---------- menus ----------
 
@@ -84,11 +84,11 @@ def vault_menu(path: str, password: str):
     try:
         vault = open_vault(path, password)
     except Exception as e:
-        print(f"❌ {e}")
+        print(f"{e}")
         return
 
     while True:
-        header("📂 Vault Menu")
+        header("Vault Menu")
         print("1. List entries")
         print("2. Add entry")
         print("3. View entry")
@@ -114,13 +114,13 @@ def vault_menu(path: str, password: str):
                 vault_data=vault,
                 password=password,
             )
-            print("💾 Vault saved. Goodbye!")
+            print("Vault saved. Goodbye!")
             return
         else:
-            print("❌ Invalid choice")
+            print("Invalid choice")
 
 def startup_menu():
-    header("🔐 Secure Password Vault")
+    header("Secure Password Vault")
     print("1. Create new vault")
     print("2. Open existing vault")
     print("3. Exit")
@@ -132,9 +132,9 @@ def startup_menu():
         password = getpass.getpass("Master password: ")
         try:
             create_vault(path, password)
-            print("✅ Vault created")
+            print("Vault created")
         except FileExistsError:
-            print("❌ Vault already exists")
+            print("Vault already exists")
 
     elif choice == "2":
         path = prompt("Vault filename")
@@ -145,7 +145,7 @@ def startup_menu():
         sys.exit(0)
 
     else:
-        print("❌ Invalid choice")
+        print("Invalid choice")
 
 # ---------- entry point ----------
 
