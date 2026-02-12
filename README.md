@@ -25,7 +25,7 @@ vault/
 ├── crypto.py       # AES-256-GCM encryption/decryption
 ├── format.py       # Vault header serialization/parsing
 └── vault.py        # Create/open/save vault workflows
-main.y        # For testing
+main.py        # For testing
 cli.py        # User-facing CLI
 ```
 
